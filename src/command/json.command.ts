@@ -31,7 +31,6 @@ export default class JsonCommand implements yargs.CommandModule {
       }
 
       const data = await execute(date);
-      console.log(data)
 
       fs.writeFileSync('report.json', JSON.stringify(data));
     } catch (err) {
