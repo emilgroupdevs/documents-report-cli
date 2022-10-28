@@ -1,10 +1,12 @@
 /* eslint-disable class-methods-use-this */
 
 import * as yargs from 'yargs';
+import rimraf from 'rimraf';
+import fs from 'fs';
 import { Argv } from 'yargs';
 import dayjs from 'dayjs';
 import { execute } from '../helper';
-import { writeCsv } from '../csv.writer';
+import { writeCsv, zipFolder } from '../file.writer';
 
 export default class CsvCommand implements yargs.CommandModule {
   command = 'csv';
@@ -32,9 +34,16 @@ export default class CsvCommand implements yargs.CommandModule {
 
       const data = await execute(date);
 
-      const filename = `report_${dayjs(date).format('YYYY-MM-DD')}.csv`;
+      if (data.length) {
+        const dateFormatted = dayjs(date).format('YYYY-MM-DD');
 
-      await writeCsv(filename, data);
+        const filename = `report_${dateFormatted}.csv`;
+
+        await writeCsv(filename, data);
+        await zipFolder(dateFormatted);
+
+        rimraf(dateFormatted, (error) => { console.log(error); });
+      }
 
       console.log('Done.')
     } catch (err) {

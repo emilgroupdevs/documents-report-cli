@@ -18,9 +18,11 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/cover42/upload-document-poc#readme",
   "devDependencies": {
+    "@types/archiver": "^5.3.1",
     "@types/cli-progress": "^3.11.0",
     "@types/json2csv": "^5.0.3",
     "@types/node": "^18.7.13",
+    "@types/rimraf": "^3.0.2",
     "@types/yargs": "^17.0.12",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
@@ -29,9 +31,10 @@
   "dependencies": {
     "@emilgroup/account-sdk-node": "^1.1.0",
     "@emilgroup/billing-sdk-node": "^1.1.0",
-    "@emilgroup/document-sdk-node": "file:.yalc/@emilgroup/document-sdk-node",
+    "@emilgroup/document-sdk-node": "^1.0.0",
     "@emilgroup/insurance-sdk-node": "^1.1.1",
     "@emilgroup/payment-sdk-node": "^1.0.0",
+    "archiver": "^5.3.1",
     "axios": "^0.27.2",
     "cli-progress": "^3.11.2",
     "csv": "^6.2.1",
@@ -40,6 +43,7 @@
     "form-data": "^4.0.0",
     "node-fetch": "^2.6.7",
     "objects-to-csv": "^1.3.6",
+    "rimraf": "^3.0.2",
     "yargonaut": "^1.1.4",
     "yargs": "^17.5.1"
   },
