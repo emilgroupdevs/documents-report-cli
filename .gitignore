@@ -9,6 +9,8 @@ dist/
 yalc.lock
 *.pdf
 *.csv
+*.zip
+
 # Compiled Java class files
 *.class
 
