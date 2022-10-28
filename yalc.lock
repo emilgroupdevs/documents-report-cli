@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@emilgroup/document-sdk-node": {
+      "signature": "a51dd0b7b48a3e6bfefcabcd1253bd89",
+      "file": true
+    }
+  }
+}
