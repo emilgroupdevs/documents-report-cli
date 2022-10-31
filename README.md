@@ -1,6 +1,6 @@
 # Data api POC
 
-`list-documents-poc` A simple Node project to fetch the list of documents from your Emil Insurance Suite that were created today or on a specific date.
+`documents-report-cli` A simple Node project to fetch the list of documents from your Emil Insurance Suite that were created today or on a specific date.
 
 ## installation
 
