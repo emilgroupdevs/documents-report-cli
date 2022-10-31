@@ -39,9 +39,14 @@ export default class CsvCommand implements yargs.CommandModule {
 
         const filename = `report_${dateFormatted}.csv`;
 
+        // create the report CSV
         await writeCsv(filename, data);
+
+        // Zip all files
         await zipFolder(dateFormatted);
 
+        // Deletes the directory.
+        // comment if you want to keep both zip and the directory.
         rimraf(dateFormatted, (error) => { console.log(error); });
       }
 
