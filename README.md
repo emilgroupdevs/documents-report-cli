@@ -11,6 +11,7 @@ npm install
 ```
 
 ## Config
+### Env variables
 
 ```bash
 export EMIL_USERNAME=example@emil.de ----------> Replace me
@@ -22,6 +23,15 @@ Export the ENVs to your terminal:
 
 ```bash
 source .env
+```
+
+### Credential file
+
+You can also provide a configuration file under ~/.emil/credentials with the following content:
+
+```bash 
+emil_username=XXXXX@XXXX.XXX
+emil_password=XXXXXXXXXXXXXX
 ```
 
 ## Usage
